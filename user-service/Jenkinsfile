@@ -1,0 +1,10 @@
+pipeline {
+    agent { label 'docker-node' }
+    stages {
+        stage('hello') {
+            steps {
+                echo "Hello from branch: ${env.BRANCH_NAME}"
+            }
+        }
+    }
+}
